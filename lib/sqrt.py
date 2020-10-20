@@ -1,8 +1,7 @@
-def square_root(n):
+DEFAULT_STEPS = 20
+
+def square_root(n, steps = DEFAULT_STEPS):
     root = n / 2
-    for k in range(20):
+    for k in range(steps):
         root = 0.5 * (root + n / root)
     return root
-print(square_root(4))
-print(square_root(2))
-print(square_root(496))
