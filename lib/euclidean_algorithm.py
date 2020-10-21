@@ -3,9 +3,10 @@ def gcd(a, b):
 
     while b != 0:
         t = b
-        b = a mod b
+        b = a % b
         a = t
-    return a
+    # Absolute value necessary otherwise -gcd(a, b) may be returned
+    return abs(a)
 
 """ Takes two integers a and b and computes values which satisfy
     Bezout's identity.
